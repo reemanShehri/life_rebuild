@@ -1,0 +1,64 @@
+.losses-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.losses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.loss-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    display: flex;
+    transition: 0.2s;
+}
+.loss-card:hover {
+    transform: translateY(-4px);
+}
+.loss-icon {
+    background: #f0f2f5;
+    padding: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loss-details {
+    padding: 1rem;
+    flex: 1;
+}
+.loss-details h3 {
+    margin: 0 0 0.5rem;
+    color: #1e3c2c;
+}
+.loss-details p {
+    font-size: 0.9rem;
+    color: #555;
+}
+.loss-details small {
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 0.75rem;
+    color: #888;
+}
+.btn-sm {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0.2rem 0.6rem;
+    background: #3498db;
+    color: white;
+    border-radius: 0.5rem;
+    font-size: 0.75rem;
+    text-decoration: none;
+}
+.btn-danger {
+    background: #e74c3c;
+}

@@ -1,0 +1,33 @@
+.profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+.profile-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.profile-card h2 {
+    color: #1e3c2c;
+    margin-bottom: 1.5rem;
+    border-right: 4px solid #f39c12;
+    padding-right: 0.8rem;
+}
+.alert {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+}
+.alert-danger { background: #f8d7da; color: #721c24; }
+.alert-success { background: #d4edda; color: #155724; }
+.btn {
+    background: #1e3c2c;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
