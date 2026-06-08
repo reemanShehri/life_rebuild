@@ -1,14 +1,15 @@
 .volunteer-container {
-    max-width: 1200px;
+    max-width: 2000px;
     margin: 2rem auto;
     padding: 0 1rem;
 }
 .volunteer-hero {
-    background: linear-gradient(135deg, #e0f2f1, #b2dfdb);
-    padding: 2rem;
-    border-radius: 2rem;
+    background: linear-gradient(135deg, #e0f2f1, #7281eb);
+    padding: 5rem;
+    /* border-radius: 2rem; */
     text-align: center;
     margin-bottom: 2rem;
+     min-height: 250px;
 }
 .request-card {
     background: white;
@@ -18,7 +19,7 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 .btn-request {
-    background: #1e3c2c;
+    background: #75baff;
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 2rem;

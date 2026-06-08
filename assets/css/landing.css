@@ -1,9 +1,9 @@
 /* ========== LANDING PAGE STYLES - مطابق للصورة ========== */
 :root {
-    --primary: #713f80;
-    --primary-dark: #7bcb9f;
-    --secondary: #f4a261;
-    --accent: #e76f51;
+    --primary: #000000;
+    --primary-dark: #7688ff;
+    --secondary: #d4fff6;
+    --accent: #519fe7;
     --light-bg: #fef9f0;
     --white: #ffffff;
     --dark: #2c3e50;
@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: var(--light-bg);
+    background-color: white;
 }
 
 .landing-main {
@@ -24,11 +24,17 @@ body {
 .hero {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     color: white;
-    padding: 3rem 2rem;
-    border-radius: 2rem;
+    padding: 5rem 4rem;
     text-align: center;
     margin: 2rem 0;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100vw;           /* عرض كامل الشاشة */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 0;       /* اختياري: إزالة التدوير */
 }
 
 .hero h1 {
@@ -58,8 +64,8 @@ body {
 }
 
 .btn-primary {
-    background-color: var(--secondary);
-    color: var(--primary-dark);
+    background-color:black;
+    color: black;
     padding: 0.75rem 2rem;
     border-radius: 2rem;
     font-weight: bold;
@@ -111,7 +117,7 @@ body {
     border-radius: 1.5rem;
     padding: 1.8rem;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(197, 195, 195, 0.05);
     transition: transform 0.3s;
 }
 
@@ -156,12 +162,20 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+
+    background: linear-gradient(135deg, #ffffff 0%, #3498db 100%);
     color: white;
-    padding: 3rem 2rem;
-    border-radius: 2rem;
+    padding: 5rem 4rem;
     text-align: center;
-    margin: 3rem 0;
+    margin: 2rem 0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100vw;           /* عرض كامل الشاشة */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    border-radius: 0;       /* اختياري: إزالة التدوير */
 }
 
 .cta-section h2 {

@@ -7,7 +7,7 @@
     margin-bottom: 2rem;
 }
 .welcome-section h2 {
-    color: #1e3c2c;
+    color: #37b9ff;
     margin-bottom: 0.5rem;
 }
 .stats-grid {
@@ -62,7 +62,7 @@
     background: #1e3c2c;
     color: white;
 }
-.btn-primary:hover { background: #2c5e3a; }
+.btn-primary:hover { background: #a1f3ff; }
 .btn-secondary {
     background: #ecf0f1;
     color: #2c3e50;

@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life-Rebuild | إعادة بناء الحياة</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='80' fill='%231e3c2c'>🌱</text></svg>">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+  <rect x='5' y='5' width='90' height='90' rx='20' fill='%234A7DFF'/>
+  <path d='M50 72 L44 66 C25 49 15 39 15 25 C15 15 23 8 33 8 C40 8 46 12 50 18 C54 12 60 8 67 8 C77 8 85 15 85 25 C85 39 75 49 56 66 Z' fill='white'/>
+</svg>">    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         /* ========== تنسيقات الهيدر والفوتر الجديدة ========== */
         header {
-            background: linear-gradient(135deg, #538058, #e9ecef);
+            background: linear-gradient(135deg, #ffffff, #ffffff);
             color: #2c3e50;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             position: sticky;
@@ -125,8 +128,13 @@
         <div class="header-container">
             <div class="logo">
 
-                <h1>🌱🇵🇸 Life-Rebuild</h1>
-                <p>منصة دعم العائلات بعد الحرب</p>
+<h1>
+    <svg width="32" height="32" viewBox="0 0 100 100" style="vertical-align:middle; margin-left:8px;">
+        <rect x="5" y="3" width="90" height="80" rx="20" fill="#4A7DFF"/>
+        <path d="M50 72 L44 66 C25 49 15 39 15 25 C15 15 23 8 33 8 C40 8 46 12 50 18 C54 12 60 8 67 8 C77 8 85 15 85 25 C85 39 75 49 56 66 Z" fill="white"/>
+    </svg>
+    🇵🇸 Life-Rebuild
+</h1>                <p>منصة دعم العائلات بعد الحرب</p>
             </div>
             <nav>
                 <ul>
