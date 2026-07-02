@@ -1,32 +1,44 @@
-# استخدام صورة PHP رسمية مع Apache
 FROM php:8.2-apache
 
-# تحديث مدير الحزم وتثبيت أدوات مساعدة (اختياري لكن مفيد)
 RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    zip \
+    unzip \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
-    zip \
-    unzip \
+    libzip-dev \
+    libonig-dev \
+    libxml2-dev \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install -j$(nproc) gd
+    && docker-php-ext-install \
+        pdo \
+        pdo_mysql \
+        mysqli \
+        mbstring \
+        zip \
+        gd \
+        bcmath \
+        xml \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-# ⭐ الأمر السحري: تثبيت PDO و PDO_MySQL (هذا هو حل مشكلتك الأساسي)
-# قمنا بكتابة pdo أولاً ثم pdo_mysql لضمان التثبيت الصحيح
-RUN docker-php-ext-install pdo pdo_mysql mysqli
-
-# تمكين إعادة الكتابة (mod_rewrite)
 RUN a2enmod rewrite
 
-# نسخ جميع ملفات المشروع إلى مجلد الخادم
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
 COPY . /var/www/html/
 
-# منح الصلاحيات
+WORKDIR /var/www/html
+
+RUN if [ -f composer.json ]; then composer install --no-dev --optimize-autoloader --no-interaction; fi
+
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
 
-# (خطوة تشخيصية) أمر لعرض الإضافات المثبتة في سجل البناء للتأكد من وجود pdo_mysql
-RUN php -m | grep pdo
+RUN php -m | grep -i pdo_mysql
 
-# إبقاء الخدمة مشغلة
+EXPOSE 80
+
 CMD ["apache2-foreground"]
